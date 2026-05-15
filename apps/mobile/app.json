@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "TableBite",
+    "slug": "tablebite",
+    "scheme": "tablebite",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "plugins": ["expo-router", "expo-secure-store"],
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.tablebite.app" },
+    "android": { "package": "com.tablebite.app" },
+    "extra": {
+      "supabaseUrl": "$EXPO_PUBLIC_SUPABASE_URL",
+      "supabaseAnonKey": "$EXPO_PUBLIC_SUPABASE_ANON_KEY"
+    },
+    "experiments": { "typedRoutes": true }
+  }
+}
