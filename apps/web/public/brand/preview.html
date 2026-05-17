@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Arkan — Logo system</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Cairo:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --orange:#ea580c; --orange-light:#f97316; --warm:#fb923c; --ink:#1c1917; --muted:#78716c; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:#fafaf9; }
+    header { padding: 32px 40px 16px; border-bottom: 1px solid #e7e5e4; background:#fff; }
+    header h1 { margin:0; font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+    header p { margin:6px 0 0; color:var(--muted); font-size:14px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background:#fff; border:1px solid #e7e5e4; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:14px; }
+    .card.dark { background:#0f172a; color:#fff; border-color:#1e293b; }
+    .card.brand { background: var(--orange); color:#fff; border-color: var(--orange); }
+    .label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: var(--muted); }
+    .card.dark .label, .card.brand .label { color: rgba(255,255,255,0.7); }
+    .preview { display:flex; align-items:center; justify-content:center; min-height:140px; }
+    .preview-row { display:flex; align-items:center; gap:24px; flex-wrap:wrap; justify-content:center; }
+    img { display:block; }
+    .scales { display:flex; align-items:flex-end; gap:18px; }
+    .swatches { display:flex; gap:10px; align-items:center; }
+    .swatch { width:48px; height:48px; border-radius:10px; }
+    .swatch span { display:block; font-size:10px; margin-top:6px; color: var(--muted); text-align:center; }
+    .type-sample { font-size:48px; font-weight:800; letter-spacing:-2px; line-height:1; }
+    .type-sample.ar { font-family:'Cairo',sans-serif; font-weight:700; color: var(--orange); direction:rtl; }
+    code { font-family: ui-monospace, monospace; font-size: 12px; background: #f5f5f4; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Arkan — Logo System</h1>
+    <p>From kitchen to customer, all in one. · أركان</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="label">Primary logo (horizontal)</div>
+      <div class="preview"><img src="./logo.svg" width="280" alt="Arkan"></div>
+    </div>
+
+    <div class="card dark">
+      <div class="label">On dark</div>
+      <div class="preview"><img src="./logo-on-dark.svg" width="280" alt="Arkan"></div>
+    </div>
+
+    <div class="card">
+      <div class="label">Stacked bilingual</div>
+      <div class="preview"><img src="./logo-stacked-bilingual.svg" height="200" alt="Arkan أركان"></div>
+    </div>
+
+    <div class="card brand">
+      <div class="label">App icon (rounded tile)</div>
+      <div class="preview"><img src="./app-icon.svg" width="120" alt="Arkan app icon"></div>
+    </div>
+
+    <div class="card">
+      <div class="label">Mark only — size study</div>
+      <div class="preview scales">
+        <img src="./logo-mark.svg" width="96">
+        <img src="./logo-mark.svg" width="64">
+        <img src="./logo-mark.svg" width="40">
+        <img src="./logo-mark.svg" width="24">
+        <img src="./logo-mark.svg" width="16">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Favicon (32×32 with background)</div>
+      <div class="preview scales">
+        <img src="./../favicon.svg" width="64">
+        <img src="./../favicon.svg" width="32">
+        <img src="./../favicon.svg" width="16">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Typography</div>
+      <div class="preview-row">
+        <span class="type-sample">Arkan</span>
+        <span class="type-sample ar">أركان</span>
+      </div>
+      <p style="color:var(--muted);font-size:12px;margin:0">
+        Latin: Inter 800. Arabic: Cairo 700.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">Color palette</div>
+      <div class="preview-row swatches">
+        <div>
+          <div class="swatch" style="background:#ea580c"></div>
+          <span>#ea580c · primary</span>
+        </div>
+        <div>
+          <div class="swatch" style="background:#f97316"></div>
+          <span>#f97316 · accent</span>
+        </div>
+        <div>
+          <div class="swatch" style="background:#fb923c"></div>
+          <span>#fb923c · warmth</span>
+        </div>
+        <div>
+          <div class="swatch" style="background:#1c1917"></div>
+          <span>#1c1917 · ink</span>
+        </div>
+        <div>
+          <div class="swatch" style="background:#fafaf9;border:1px solid #e7e5e4"></div>
+          <span>#fafaf9 · paper</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="grid-column: 1 / -1">
+      <div class="label">Concept</div>
+      <p style="margin:0; line-height:1.6; color:#44403c; font-size:14px">
+        <strong>Arkan</strong> (Arabic: <span style="font-family:Cairo,sans-serif" dir="rtl">أركان</span>) means
+        <em>pillars / foundations / cornerstones</em>. The mark is a stylized temple façade — four
+        pillars supporting a lintel above and a stylobate below. The small accent dot at the
+        centre is the warmth at the heart of every kitchen. The same geometric language
+        carries through the wordmark "A".
+      </p>
+    </div>
+  </main>
+</body>
+</html>

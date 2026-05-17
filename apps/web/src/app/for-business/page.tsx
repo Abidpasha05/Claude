@@ -6,7 +6,8 @@ export default function ForBusinessPage() {
     <div className="min-h-screen">
       <header className="border-b bg-white">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-2">
+          <Link href="/" className="flex items-center gap-2" aria-label="Arkan home">
+            <img src="/brand/logo-mark.svg" alt="" width={28} height={28} />
             <span className="font-bold text-xl text-brand-700">Arkan</span>
             <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أركان</span>
           </Link>

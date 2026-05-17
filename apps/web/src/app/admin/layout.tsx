@@ -32,11 +32,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <div className="min-h-screen flex">
       <aside className="w-60 bg-neutral-900 text-white flex flex-col">
         <div className="p-4 border-b border-neutral-800">
-          <Link href="/admin" className="flex items-baseline gap-2">
+          <Link href="/admin" className="flex items-center gap-2">
+            <img src="/brand/app-icon.svg" alt="" width={28} height={28} className="rounded-md" />
             <span className="font-bold text-lg">Arkan</span>
             <span className="text-xs text-neutral-500" dir="rtl">أركان</span>
           </Link>
-          <p className="text-[10px] text-neutral-500 leading-tight">From kitchen to customer, all in one.</p>
+          <p className="text-[10px] text-neutral-500 leading-tight mt-1">From kitchen to customer, all in one.</p>
           <p className="text-xs text-neutral-400 mt-2">{(memberships[0] as any).restaurants?.name}</p>
         </div>
         <nav className="flex-1 p-2 space-y-1">
