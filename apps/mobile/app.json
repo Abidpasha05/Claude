@@ -10,14 +10,14 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
-      ["expo-notifications", { "color": "#f97316" }],
+      ["expo-notifications", { "color": "#f59e0b" }],
       ["expo-location", {
         "locationAlwaysAndWhenInUsePermission": "Arkan needs your location to share live ETA with customers while you deliver."
       }]
     ],
     "notification": {
       "icon": "./assets/notification-icon.png",
-      "color": "#f97316",
+      "color": "#f59e0b",
       "androidMode": "default",
       "androidCollapsedTitle": "Arkan"
     },

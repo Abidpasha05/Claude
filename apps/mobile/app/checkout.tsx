@@ -100,9 +100,9 @@ export default function CheckoutScreen() {
                 paddingHorizontal: 14,
                 paddingVertical: 10,
                 borderRadius: 999,
-                backgroundColor: slotIso === s.start ? '#ea580c' : 'white',
+                backgroundColor: slotIso === s.start ? '#f59e0b' : 'white',
                 borderWidth: 1,
-                borderColor: slotIso === s.start ? '#ea580c' : '#ddd',
+                borderColor: slotIso === s.start ? '#f59e0b' : '#ddd',
                 marginRight: 8,
               }}
             >
@@ -150,7 +150,7 @@ export default function CheckoutScreen() {
         disabled={busy || !slotIso || !phone}
         onPress={place}
         style={{
-          backgroundColor: busy || !slotIso || !phone ? '#fbbf24' : '#ea580c',
+          backgroundColor: busy || !slotIso || !phone ? '#fbbf24' : '#f59e0b',
           padding: 16,
           borderRadius: 12,
           marginTop: 16,
@@ -185,9 +185,9 @@ function Toggle({ active, onPress, label }: { active: boolean; onPress: () => vo
         paddingVertical: 12,
         paddingHorizontal: 16,
         borderRadius: 10,
-        backgroundColor: active ? '#ea580c' : 'white',
+        backgroundColor: active ? '#f59e0b' : 'white',
         borderWidth: 1,
-        borderColor: active ? '#ea580c' : '#ddd',
+        borderColor: active ? '#f59e0b' : '#ddd',
       }}
     >
       <Text style={{ color: active ? 'white' : '#333', fontWeight: '600' }}>{label}</Text>

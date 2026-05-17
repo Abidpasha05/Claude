@@ -83,7 +83,7 @@ export default function RestaurantScreen() {
               </View>
               {!oos && (
                 <View style={{ justifyContent: 'center' }}>
-                  <Text style={{ color: '#ea580c', fontWeight: '700', fontSize: 22 }}>+</Text>
+                  <Text style={{ color: '#f59e0b', fontWeight: '700', fontSize: 22 }}>+</Text>
                 </View>
               )}
             </Pressable>
@@ -98,7 +98,7 @@ export default function RestaurantScreen() {
             left: 16,
             right: 16,
             bottom: 24,
-            backgroundColor: '#ea580c',
+            backgroundColor: '#f59e0b',
             padding: 16,
             borderRadius: 12,
             flexDirection: 'row',

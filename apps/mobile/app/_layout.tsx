@@ -35,7 +35,7 @@ export default function RootLayout() {
   return (
     <>
       <StatusBar style="auto" />
-      <Stack screenOptions={{ headerStyle: { backgroundColor: '#f97316' }, headerTintColor: '#fff' }}>
+      <Stack screenOptions={{ headerStyle: { backgroundColor: '#0f172a' }, headerTintColor: '#fff', headerTitleStyle: { fontWeight: '800' } }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="restaurant/[slug]" options={{ title: 'Restaurant' }} />
         <Stack.Screen name="cart" options={{ title: 'Your cart', presentation: 'modal' }} />

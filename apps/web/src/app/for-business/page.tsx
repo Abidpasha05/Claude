@@ -8,7 +8,7 @@ export default function ForBusinessPage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2" aria-label="Arkan home">
             <img src="/brand/logo-mark.svg" alt="" width={28} height={28} />
-            <span className="font-bold text-xl text-brand-700">Arkan</span>
+            <span className="font-bold text-xl text-brand-600">Arkan</span>
             <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أركان</span>
           </Link>
           <Link href="/auth/sign-in" className="btn-primary text-sm">Sign in to your dashboard</Link>
@@ -17,7 +17,7 @@ export default function ForBusinessPage() {
 
       <section className="bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-          <span className="badge bg-brand-100 text-brand-700 mb-4">Arkan for restaurants</span>
+          <span className="badge bg-accent-100 text-accent-700 mb-4">Arkan for restaurants</span>
           <h1 className="text-4xl md:text-5xl font-bold">From kitchen to customer, all in one.</h1>
           <p className="mt-4 text-lg text-neutral-600">
             Take orders, manage bookings, run promotions, dispatch drivers, and send the daily menu &mdash;
@@ -49,7 +49,7 @@ export default function ForBusinessPage() {
 function Plan({ name, price, features, highlighted = false }: { name: string; price: string; features: string[]; highlighted?: boolean }) {
   return (
     <div className={`card p-6 ${highlighted ? 'border-brand-500 border-2' : ''}`}>
-      {highlighted && <span className="badge bg-brand-100 text-brand-700 mb-2">Most popular</span>}
+      {highlighted && <span className="badge bg-accent-100 text-accent-700 mb-2">Most popular</span>}
       <h3 className="font-bold text-lg">{name}</h3>
       <p className="mt-2"><span className="text-3xl font-bold">{price}</span><span className="text-neutral-500">/mo</span></p>
       <ul className="mt-4 space-y-2 text-sm">

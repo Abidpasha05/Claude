@@ -41,7 +41,7 @@ const RANGE_OPTIONS = [
   { days: 365, label: 'Last year' },
 ];
 
-const PIE_COLORS = ['#ea580c', '#f97316', '#fb923c', '#fdba74', '#fed7aa', '#fef3c7'];
+const PIE_COLORS = ['#f59e0b', '#fbbf24', '#fde68a', '#fdba74', '#fef3c7', '#fef3c7'];
 
 export function AnalyticsView({
   days,
@@ -114,8 +114,8 @@ export function AnalyticsView({
           <AreaChart data={daily} margin={{ left: 0, right: 8, top: 8, bottom: 0 }}>
             <defs>
               <linearGradient id="revFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#ea580c" stopOpacity={0.4} />
-                <stop offset="100%" stopColor="#ea580c" stopOpacity={0} />
+                <stop offset="0%" stopColor="#f59e0b" stopOpacity={0.4} />
+                <stop offset="100%" stopColor="#f59e0b" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
@@ -137,7 +137,7 @@ export function AnalyticsView({
             <Area
               type="monotone"
               dataKey="revenue"
-              stroke="#ea580c"
+              stroke="#f59e0b"
               strokeWidth={2}
               fill="url(#revFill)"
             />
@@ -157,7 +157,7 @@ export function AnalyticsView({
                 formatter={(v: any) => [v, 'Orders']}
                 labelFormatter={(h) => `${h}:00`}
               />
-              <Bar dataKey="orders" fill="#ea580c" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="orders" fill="#f59e0b" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>

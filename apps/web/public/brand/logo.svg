@@ -1,23 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none" role="img" aria-label="Arkan">
   <title>Arkan — From kitchen to customer, all in one</title>
-  <!-- Mark (scaled to 64×64 fit at left) -->
+  <!-- Mark -->
   <g transform="translate(8,8)">
-    <rect x="6" y="14" width="52" height="7" rx="3.5" fill="#ea580c"/>
-    <rect x="10" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-    <rect x="22" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-    <rect x="35" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-    <rect x="47" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-    <rect x="6" y="53" width="52" height="7" rx="3.5" fill="#ea580c"/>
-    <circle cx="32" cy="37" r="2.5" fill="#fb923c"/>
+    <path d="M 32 6 L 24 54 L 10 54 Z" fill="#0f172a"/>
+    <path d="M 32 6 L 54 54 L 40 54 Z" fill="#0f172a"/>
+    <rect x="18" y="31" width="28" height="6" rx="1.5" fill="#f59e0b"/>
   </g>
   <!-- Wordmark -->
   <text x="90" y="46" font-family="Inter, system-ui, -apple-system, sans-serif"
-        font-size="34" font-weight="800" fill="#1c1917" letter-spacing="-1.2">
+        font-size="34" font-weight="800" fill="#0f172a" letter-spacing="-1.2">
     Arkan
   </text>
   <!-- Tagline -->
   <text x="92" y="64" font-family="Inter, system-ui, sans-serif"
-        font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.3">
+        font-size="10" font-weight="500" fill="#475569" letter-spacing="0.3">
     From kitchen to customer, all in one.
   </text>
 </svg>

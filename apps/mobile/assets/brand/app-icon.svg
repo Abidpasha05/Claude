@@ -1,13 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Arkan">
   <title>Arkan</title>
-  <!-- Rounded background -->
-  <rect width="64" height="64" rx="14" fill="#ea580c"/>
-  <!-- Inverted mark on the orange tile -->
-  <rect x="10" y="16" width="44" height="6" rx="3" fill="#ffffff"/>
-  <rect x="13" y="22" width="6" height="27" rx="2" fill="#ffffff"/>
-  <rect x="23" y="22" width="6" height="27" rx="2" fill="#ffffff"/>
-  <rect x="35" y="22" width="6" height="27" rx="2" fill="#ffffff"/>
-  <rect x="45" y="22" width="6" height="27" rx="2" fill="#ffffff"/>
-  <rect x="10" y="49" width="44" height="6" rx="3" fill="#ffffff"/>
-  <circle cx="32" cy="35" r="2.2" fill="#fed7aa"/>
+  <!-- Navy rounded tile -->
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <!-- A monogram in white -->
+  <path d="M 32 10 L 24 54 L 10 54 Z" fill="#ffffff"/>
+  <path d="M 32 10 L 54 54 L 40 54 Z" fill="#ffffff"/>
+  <!-- Amber crossbar -->
+  <rect x="18" y="33" width="28" height="6" rx="1.5" fill="#f59e0b"/>
 </svg>

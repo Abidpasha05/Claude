@@ -30,7 +30,7 @@ export default function AccountScreen() {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 }}>
         <Text style={{ fontSize: 18, fontWeight: '600' }}>Not signed in</Text>
         <Link href="/sign-in" asChild>
-          <Pressable style={{ backgroundColor: '#ea580c', padding: 14, borderRadius: 8, marginTop: 16 }}>
+          <Pressable style={{ backgroundColor: '#f59e0b', padding: 14, borderRadius: 8, marginTop: 16 }}>
             <Text style={{ color: 'white', fontWeight: '700' }}>Sign in</Text>
           </Pressable>
         </Link>

@@ -12,7 +12,7 @@ export default function CartScreen() {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 }}>
         <Text style={{ fontSize: 18, fontWeight: '600' }}>Your cart is empty</Text>
         <Pressable onPress={() => router.back()} style={{ marginTop: 16 }}>
-          <Text style={{ color: '#ea580c' }}>Browse menu</Text>
+          <Text style={{ color: '#f59e0b' }}>Browse menu</Text>
         </Pressable>
       </View>
     );
@@ -55,7 +55,7 @@ export default function CartScreen() {
         </View>
         <Pressable
           onPress={() => router.push('/checkout')}
-          style={{ backgroundColor: '#ea580c', padding: 16, borderRadius: 12 }}
+          style={{ backgroundColor: '#f59e0b', padding: 16, borderRadius: 12 }}
         >
           <Text style={{ color: 'white', textAlign: 'center', fontWeight: '700' }}>Checkout</Text>
         </Pressable>
@@ -71,8 +71,8 @@ const btn = {
   width: 32,
   height: 32,
   borderRadius: 16,
-  backgroundColor: '#fff7ed',
+  backgroundColor: '#fffbeb',
   alignItems: 'center' as const,
   justifyContent: 'center' as const,
 };
-const btnText = { color: '#ea580c', fontSize: 18, fontWeight: '700' as const };
+const btnText = { color: '#f59e0b', fontSize: 18, fontWeight: '700' as const };

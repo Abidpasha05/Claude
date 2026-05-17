@@ -94,7 +94,7 @@ export default function DriverHome() {
             <Pressable style={card}>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ fontWeight: '700' }}>{o.restaurants?.name}</Text>
-                <Text style={{ color: '#ea580c', fontWeight: '700' }}>{formatMoney(o.grand_total, o.currency)}</Text>
+                <Text style={{ color: '#f59e0b', fontWeight: '700' }}>{formatMoney(o.grand_total, o.currency)}</Text>
               </View>
               <Text style={{ color: '#666', marginTop: 4 }}>
                 #{o.order_number} · {o.status?.replace('_', ' ')}
@@ -115,7 +115,7 @@ export default function DriverHome() {
           <View key={o.id} style={card}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
               <Text style={{ fontWeight: '700' }}>{o.restaurants?.name}</Text>
-              <Text style={{ color: '#ea580c', fontWeight: '700' }}>{formatMoney(o.grand_total, o.currency)}</Text>
+              <Text style={{ color: '#f59e0b', fontWeight: '700' }}>{formatMoney(o.grand_total, o.currency)}</Text>
             </View>
             <Text style={{ color: '#666', marginTop: 4 }}>#{o.order_number}</Text>
             {o.delivery_address_snapshot?.address && (

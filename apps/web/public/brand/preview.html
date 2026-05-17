@@ -8,28 +8,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Cairo:wght@500;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --orange:#ea580c; --orange-light:#f97316; --warm:#fb923c; --ink:#1c1917; --muted:#78716c; }
+    :root { --navy:#0f172a; --navy-light:#1e293b; --amber:#f59e0b; --amber-dark:#d97706; --ink:#0f172a; --muted:#475569; --paper:#f8fafc; }
     * { box-sizing: border-box; }
-    body { margin:0; font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:#fafaf9; }
-    header { padding: 32px 40px 16px; border-bottom: 1px solid #e7e5e4; background:#fff; }
+    body { margin:0; font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--paper); }
+    header { padding: 32px 40px 16px; border-bottom: 1px solid #e2e8f0; background:#fff; }
     header h1 { margin:0; font-size:22px; font-weight:800; letter-spacing:-0.5px; }
     header p { margin:6px 0 0; color:var(--muted); font-size:14px; }
     main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .card { background:#fff; border:1px solid #e7e5e4; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:14px; }
-    .card.dark { background:#0f172a; color:#fff; border-color:#1e293b; }
-    .card.brand { background: var(--orange); color:#fff; border-color: var(--orange); }
-    .label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: var(--muted); }
-    .card.dark .label, .card.brand .label { color: rgba(255,255,255,0.7); }
+    .card { background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:14px; }
+    .card.dark { background:var(--navy); color:#fff; border-color:var(--navy-light); }
+    .card.brand { background: var(--amber); color:var(--navy); border-color: var(--amber); }
+    .label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color: var(--muted); }
+    .card.dark .label { color: #94a3b8; }
+    .card.brand .label { color: rgba(15,23,42,0.7); }
     .preview { display:flex; align-items:center; justify-content:center; min-height:140px; }
     .preview-row { display:flex; align-items:center; gap:24px; flex-wrap:wrap; justify-content:center; }
     img { display:block; }
     .scales { display:flex; align-items:flex-end; gap:18px; }
-    .swatches { display:flex; gap:10px; align-items:center; }
-    .swatch { width:48px; height:48px; border-radius:10px; }
-    .swatch span { display:block; font-size:10px; margin-top:6px; color: var(--muted); text-align:center; }
-    .type-sample { font-size:48px; font-weight:800; letter-spacing:-2px; line-height:1; }
-    .type-sample.ar { font-family:'Cairo',sans-serif; font-weight:700; color: var(--orange); direction:rtl; }
-    code { font-family: ui-monospace, monospace; font-size: 12px; background: #f5f5f4; padding: 2px 6px; border-radius: 4px; }
+    .swatches { display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap; }
+    .swatch { width:56px; height:56px; border-radius:10px; }
+    .swatch + span { display:block; font-size:10px; margin-top:6px; color: var(--muted); text-align:center; line-height:1.3; }
+    .type-sample { font-size:48px; font-weight:800; letter-spacing:-2px; line-height:1; color: var(--navy); }
+    .type-sample.ar { font-family:'Cairo',sans-serif; font-weight:700; color: var(--amber); direction:rtl; }
   </style>
 </head>
 <body>
@@ -51,12 +51,12 @@
 
     <div class="card">
       <div class="label">Stacked bilingual</div>
-      <div class="preview"><img src="./logo-stacked-bilingual.svg" height="200" alt="Arkan أركان"></div>
+      <div class="preview"><img src="./logo-stacked-bilingual.svg" height="220" alt="Arkan أركان"></div>
     </div>
 
     <div class="card brand">
-      <div class="label">App icon (rounded tile)</div>
-      <div class="preview"><img src="./app-icon.svg" width="120" alt="Arkan app icon"></div>
+      <div class="label">Amber-tile variant</div>
+      <div class="preview" style="background:var(--navy);padding:32px;border-radius:10px"><img src="./app-icon.svg" width="120" alt="Arkan app icon"></div>
     </div>
 
     <div class="card">
@@ -73,9 +73,9 @@
     <div class="card">
       <div class="label">Favicon (32×32 with background)</div>
       <div class="preview scales">
-        <img src="./../favicon.svg" width="64">
-        <img src="./../favicon.svg" width="32">
-        <img src="./../favicon.svg" width="16">
+        <img src="../favicon.svg" width="64">
+        <img src="../favicon.svg" width="32">
+        <img src="../favicon.svg" width="16">
       </div>
     </div>
 
@@ -94,36 +94,40 @@
       <div class="label">Color palette</div>
       <div class="preview-row swatches">
         <div>
-          <div class="swatch" style="background:#ea580c"></div>
-          <span>#ea580c · primary</span>
+          <div class="swatch" style="background:#0f172a"></div>
+          <span>#0f172a<br/>navy · primary</span>
         </div>
         <div>
-          <div class="swatch" style="background:#f97316"></div>
-          <span>#f97316 · accent</span>
+          <div class="swatch" style="background:#1e293b"></div>
+          <span>#1e293b<br/>navy · raised</span>
         </div>
         <div>
-          <div class="swatch" style="background:#fb923c"></div>
-          <span>#fb923c · warmth</span>
+          <div class="swatch" style="background:#f59e0b"></div>
+          <span>#f59e0b<br/>amber · accent</span>
         </div>
         <div>
-          <div class="swatch" style="background:#1c1917"></div>
-          <span>#1c1917 · ink</span>
+          <div class="swatch" style="background:#fbbf24"></div>
+          <span>#fbbf24<br/>amber · light</span>
         </div>
         <div>
-          <div class="swatch" style="background:#fafaf9;border:1px solid #e7e5e4"></div>
-          <span>#fafaf9 · paper</span>
+          <div class="swatch" style="background:#f8fafc;border:1px solid #e2e8f0"></div>
+          <span>#f8fafc<br/>paper</span>
+        </div>
+        <div>
+          <div class="swatch" style="background:#475569"></div>
+          <span>#475569<br/>muted text</span>
         </div>
       </div>
     </div>
 
     <div class="card" style="grid-column: 1 / -1">
       <div class="label">Concept</div>
-      <p style="margin:0; line-height:1.6; color:#44403c; font-size:14px">
+      <p style="margin:0; line-height:1.7; color:#1e293b; font-size:14px">
         <strong>Arkan</strong> (Arabic: <span style="font-family:Cairo,sans-serif" dir="rtl">أركان</span>) means
-        <em>pillars / foundations / cornerstones</em>. The mark is a stylized temple façade — four
-        pillars supporting a lintel above and a stylobate below. The small accent dot at the
-        centre is the warmth at the heart of every kitchen. The same geometric language
-        carries through the wordmark "A".
+        <em>pillars / foundations / cornerstones</em>. The new mark is a bold geometric <strong>monogram A</strong>:
+        two confident triangular slabs in deep navy meeting at the apex, with a wide amber crossbar
+        cutting through the centre — the warmth at the heart of the kitchen, framed by the structure
+        the platform provides. Navy gives the brand authority and trust; amber carries the hospitality.
       </p>
     </div>
   </main>

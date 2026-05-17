@@ -31,7 +31,7 @@ export default function OrdersScreen() {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 }}>
         <Text style={{ fontSize: 18, fontWeight: '600' }}>Sign in to see orders</Text>
         <Link href="/sign-in" asChild>
-          <Pressable style={{ backgroundColor: '#ea580c', padding: 14, borderRadius: 8, marginTop: 16 }}>
+          <Pressable style={{ backgroundColor: '#f59e0b', padding: 14, borderRadius: 8, marginTop: 16 }}>
             <Text style={{ color: 'white', fontWeight: '700' }}>Sign in</Text>
           </Pressable>
         </Link>
@@ -49,7 +49,7 @@ export default function OrdersScreen() {
           <Pressable style={{ backgroundColor: 'white', padding: 16, borderRadius: 12, marginBottom: 8 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
               <Text style={{ fontWeight: '600' }}>{item.restaurants?.name ?? 'Order'}</Text>
-              <Text style={{ color: '#ea580c', fontWeight: '600' }}>
+              <Text style={{ color: '#f59e0b', fontWeight: '600' }}>
                 {formatMoney(item.grand_total, item.currency)}
               </Text>
             </View>

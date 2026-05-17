@@ -1,14 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Arkan mark">
   <title>Arkan</title>
-  <!-- Lintel (top beam) -->
-  <rect x="6" y="14" width="52" height="7" rx="3.5" fill="#ea580c"/>
-  <!-- Four pillars -->
-  <rect x="10" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-  <rect x="22" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-  <rect x="35" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-  <rect x="47" y="21" width="7" height="32" rx="2" fill="#ea580c"/>
-  <!-- Base / stylobate -->
-  <rect x="6" y="53" width="52" height="7" rx="3.5" fill="#ea580c"/>
-  <!-- Warmth inside (subtle dot — the "fire" at the heart of the kitchen) -->
-  <circle cx="32" cy="37" r="2.5" fill="#fb923c"/>
+  <!-- Left leg of A -->
+  <path d="M 32 6 L 24 54 L 10 54 Z" fill="#0f172a"/>
+  <!-- Right leg of A -->
+  <path d="M 32 6 L 54 54 L 40 54 Z" fill="#0f172a"/>
+  <!-- Amber crossbar -->
+  <rect x="18" y="31" width="28" height="6" rx="1.5" fill="#f59e0b"/>
 </svg>

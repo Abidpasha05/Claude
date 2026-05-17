@@ -8,13 +8,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2" aria-label="Arkan home">
             <img src="/brand/logo-mark.svg" alt="" width={28} height={28} />
-            <span className="font-bold text-xl text-brand-700">Arkan</span>
-            <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أركان</span>
+            <span className="font-bold text-xl text-brand-600">Arkan</span>
+            <span className="hidden sm:inline text-xs text-accent-600" dir="rtl">أركان</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href="/restaurants" className="hover:text-brand-700">Restaurants</Link>
-            <Link href="/for-business" className="hover:text-brand-700">For Restaurants</Link>
-            <Link href="/admin" className="hover:text-brand-700">Restaurant Admin</Link>
+            <Link href="/restaurants" className="hover:text-accent-600">Restaurants</Link>
+            <Link href="/for-business" className="hover:text-accent-600">For Restaurants</Link>
+            <Link href="/admin" className="hover:text-accent-600">Restaurant Admin</Link>
           </nav>
           <div className="flex items-center gap-2">
             <Link href="/auth/sign-in" className="btn-ghost text-sm">Sign in</Link>
@@ -23,13 +23,13 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section className="bg-gradient-to-br from-brand-50 via-white to-brand-100">
+      <section className="bg-gradient-to-br from-brand-50 via-white to-accent-50">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-32 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="badge bg-brand-100 text-brand-700 mb-4">Arkan · أركان</span>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <span className="badge bg-accent-100 text-accent-700 mb-4">Arkan · أركان</span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-brand-600">
               From kitchen to&nbsp;customer,<br />
-              <span className="text-brand-700">all in one.</span>
+              <span className="text-accent-600">all in one.</span>
             </h1>
             <p className="mt-6 text-lg text-neutral-600">
               Orders, bookings, party catering, meal subscriptions, kitchen display,
@@ -94,7 +94,7 @@ export default function HomePage() {
 function Feature({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
   return (
     <div className="card p-6">
-      <div className="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center mb-4">
+      <div className="w-10 h-10 rounded-lg bg-accent-100 text-accent-700 flex items-center justify-center mb-4">
         {icon}
       </div>
       <h3 className="font-semibold mb-2">{title}</h3>

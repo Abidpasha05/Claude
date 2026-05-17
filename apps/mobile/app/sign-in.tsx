@@ -33,7 +33,7 @@ export default function SignInScreen() {
           <Pressable
             onPress={submit}
             disabled={busy}
-            style={{ backgroundColor: '#ea580c', padding: 14, borderRadius: 8, marginTop: 12 }}
+            style={{ backgroundColor: '#f59e0b', padding: 14, borderRadius: 8, marginTop: 12 }}
           >
             <Text style={{ color: 'white', textAlign: 'center', fontWeight: '600' }}>
               {busy ? 'Sending…' : 'Send magic link'}
