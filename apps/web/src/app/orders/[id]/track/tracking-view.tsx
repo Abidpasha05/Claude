@@ -38,6 +38,8 @@ export function TrackingView({
   const [order, setOrder] = useState<Order>(initialOrder);
   const [history, setHistory] = useState<History[]>(initialHistory);
 
+  const [driverLocation, setDriverLocation] = useState<{ lat: number; lng: number; at: string } | null>(null);
+
   useEffect(() => {
     const supabase = createClient();
     const channel = supabase
@@ -51,6 +53,16 @@ export function TrackingView({
         'postgres_changes',
         { event: 'INSERT', schema: 'public', table: 'order_status_history', filter: `order_id=eq.${order.id}` },
         (payload) => setHistory((h) => [...h, payload.new])
+      )
+      .on(
+        'postgres_changes',
+        { event: 'INSERT', schema: 'public', table: 'driver_locations', filter: `order_id=eq.${order.id}` },
+        (payload: any) =>
+          setDriverLocation({
+            lat: Number(payload.new.latitude),
+            lng: Number(payload.new.longitude),
+            at: payload.new.recorded_at,
+          })
       )
       .subscribe();
     return () => {
@@ -156,6 +168,22 @@ export function TrackingView({
         </div>
       )}
 
+      {order.status === 'out_for_delivery' && driverLocation && (
+        <div className="card p-6">
+          <h2 className="font-semibold mb-2">Driver location</h2>
+          <p className="text-sm text-neutral-600 mb-3">
+            Updated {new Date(driverLocation.at).toLocaleTimeString()}
+          </p>
+          <a
+            className="btn-secondary inline-flex"
+            target="_blank"
+            href={`https://www.google.com/maps/search/?api=1&query=${driverLocation.lat},${driverLocation.lng}`}
+          >
+            View on map
+          </a>
+        </div>
+      )}
+
       <div className="card p-6">
         <h2 className="font-semibold mb-3">Items</h2>
         <ul className="space-y-1 text-sm">
@@ -178,6 +206,11 @@ export function TrackingView({
         <p className="text-xs text-neutral-500 mt-3">
           Paid via {order.payment_method?.replace('_', ' ')} · {order.payment_status}
         </p>
+        {order.status === 'completed' && (
+          <Link href={`/orders/${order.id}/receipt`} className="btn-secondary mt-4 inline-flex">
+            View tax invoice (ZATCA)
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -182,6 +182,71 @@ Wired end-to-end:
 Optional: set `EXPO_PUSH_ACCESS_TOKEN` (from your Expo dashboard) once you
 enable enhanced push security in the Expo project settings.
 
+## ZATCA e-invoicing (Saudi Arabia)
+
+Phase 1 (Generation) is fully implemented. Phase 2 (Integration) has the
+XML builder, hash, and submission scaffold; production use requires the
+seller to onboard with ZATCA and store CSID credentials.
+
+What happens automatically:
+1. When the admin marks an order `completed`, `/api/zatca/generate/[orderId]`
+   is called.
+2. The endpoint allocates the next per-seller invoice counter (ICV) via the
+   `next_zatca_counter` Postgres function (atomic, race-free).
+3. It loads the previous invoice's hash (PIH) — first ever invoice uses
+   `base64("0")`.
+4. Builds the UBL 2.1 simplified invoice XML (`buildInvoiceXML`).
+5. Hashes the XML (SHA-256, base64) and stores it on `orders.zatca_invoice_hash`.
+6. Encodes the TLV QR (`generateZatcaQR`) with seller, VAT number,
+   timestamp, total, and VAT amount.
+7. If the restaurant has `zatca_enabled = true`, submits to the Fatoora
+   reporting API.
+
+The customer-facing receipt is at `/orders/[id]/receipt` — it renders the
+QR with `qrcode` server-side (no JS needed), prints cleanly, and shows the
+ZATCA UUID. A "View tax invoice" link surfaces on the tracking page once
+the order completes.
+
+To enable real ZATCA reporting:
+```
+ZATCA_USERNAME=...
+ZATCA_SECRET=...
+ZATCA_API_BASE=https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal  # sandbox
+```
+And set the restaurant's `vat_number` and `zatca_enabled = true`.
+
+## Driver flow
+
+Drivers are users with `restaurant_members.role = 'driver'`. They open the
+mobile app, sign in, and `/account` shows an "Open driver dashboard"
+button.
+
+**Driver mobile (`apps/mobile/app/driver/`):**
+- `_layout.tsx` — guards the route group (auth + driver-role check)
+- `index.tsx` — go-online toggle, list of available delivery orders, list
+  of active deliveries
+- `order/[id].tsx` — full delivery detail with address (deep-link to
+  Google Maps), customer call/SMS, "Picked up" → "Delivered" actions, and
+  **foreground location streaming** every 10s via `expo-location` while
+  the status is `out_for_delivery`
+
+**Driver API (`apps/web/src/app/api/driver/`):**
+- `available` — lists open delivery orders + the driver's active set
+- `accept` — claim an order via a conditional UPDATE on
+  `driver_id IS NULL` (race-safe; one driver wins)
+- `status` — advance pickup/delivery, pushes order update to the customer
+- `location` — append a `driver_locations` row and refresh the live
+  snapshot on `driver_profiles`
+
+**Customer-side:** the tracking page subscribes to `driver_locations` via
+Realtime; once a location row exists for the order and status is
+`out_for_delivery`, a "View on map" panel appears.
+
+**Restaurant admin (`/admin/drivers`):** roster with online dot,
+deliveries-completed count, current assignment per driver, an alert panel
+for unassigned deliveries, and an "Add driver" form that links any
+existing TableBite account by email.
+
 ## Live order tracking
 
 `/orders/[id]/track` shows a real-time timeline (placed → confirmed → preparing

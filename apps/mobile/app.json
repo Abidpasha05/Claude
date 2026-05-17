@@ -10,7 +10,10 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
-      ["expo-notifications", { "color": "#f97316" }]
+      ["expo-notifications", { "color": "#f97316" }],
+      ["expo-location", {
+        "locationAlwaysAndWhenInUsePermission": "TableBite needs your location to share live ETA with customers while you deliver."
+      }]
     ],
     "notification": {
       "icon": "./assets/notification-icon.png",

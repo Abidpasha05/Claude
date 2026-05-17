@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
-import { LayoutDashboard, ShoppingBag, UtensilsCrossed, CalendarDays, Users, Sparkles, MessageCircle, Settings } from 'lucide-react';
+import { LayoutDashboard, ShoppingBag, UtensilsCrossed, CalendarDays, Users, Sparkles, MessageCircle, Settings, Bike } from 'lucide-react';
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
@@ -43,6 +43,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <NavItem href="/admin/specials" icon={<Sparkles className="w-4 h-4" />} label="Weekly Specials" />
           <NavItem href="/admin/reservations" icon={<CalendarDays className="w-4 h-4" />} label="Reservations" />
           <NavItem href="/admin/party-orders" icon={<Users className="w-4 h-4" />} label="Party Orders" />
+          <NavItem href="/admin/drivers" icon={<Bike className="w-4 h-4" />} label="Drivers" />
           <NavItem href="/admin/subscriptions" icon={<Users className="w-4 h-4" />} label="Meal Subscriptions" />
           <NavItem href="/admin/promotions" icon={<Sparkles className="w-4 h-4" />} label="Promotions" />
           <NavItem href="/admin/feedback" icon={<MessageCircle className="w-4 h-4" />} label="Feedback" />

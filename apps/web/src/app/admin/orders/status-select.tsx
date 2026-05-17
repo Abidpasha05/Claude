@@ -38,6 +38,11 @@ export function OrderStatusSelect({ orderId, status }: { orderId: string; status
             body: JSON.stringify({ order_id: orderId }),
           }).catch(() => {});
 
+          // Generate the ZATCA-compliant invoice on completion (idempotent).
+          if (next === 'completed') {
+            fetch(`/api/zatca/generate/${orderId}`, { method: 'POST' }).catch(() => {});
+          }
+
           router.refresh();
         });
       }}

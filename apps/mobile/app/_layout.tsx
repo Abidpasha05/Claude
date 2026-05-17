@@ -41,6 +41,7 @@ export default function RootLayout() {
         <Stack.Screen name="cart" options={{ title: 'Your cart', presentation: 'modal' }} />
         <Stack.Screen name="checkout" options={{ title: 'Checkout' }} />
         <Stack.Screen name="order/[id]" options={{ title: 'Order' }} />
+        <Stack.Screen name="driver" options={{ headerShown: false }} />
         <Stack.Screen name="sign-in" options={{ title: 'Sign in' }} />
       </Stack>
     </>
