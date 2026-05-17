@@ -4,7 +4,7 @@
     "strict": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@restaurant-saas/shared": ["../../packages/shared/src"]
+      "@arkan/shared": ["../../packages/shared/src"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]

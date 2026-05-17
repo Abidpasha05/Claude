@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 export default async function AdminPartyOrdersPage() {
   const supabase = await createClient();

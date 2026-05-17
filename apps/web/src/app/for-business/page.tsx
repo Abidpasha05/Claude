@@ -6,16 +6,21 @@ export default function ForBusinessPage() {
     <div className="min-h-screen">
       <header className="border-b bg-white">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="font-bold text-xl text-brand-700">TableBite</Link>
+          <Link href="/" className="flex items-baseline gap-2">
+            <span className="font-bold text-xl text-brand-700">Arkan</span>
+            <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أركان</span>
+          </Link>
           <Link href="/auth/sign-in" className="btn-primary text-sm">Sign in to your dashboard</Link>
         </div>
       </header>
 
       <section className="bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">One platform. Every channel.</h1>
+          <span className="badge bg-brand-100 text-brand-700 mb-4">Arkan for restaurants</span>
+          <h1 className="text-4xl md:text-5xl font-bold">From kitchen to customer, all in one.</h1>
           <p className="mt-4 text-lg text-neutral-600">
-            Take orders, manage bookings, run promotions, send the daily menu — all from a single dashboard.
+            Take orders, manage bookings, run promotions, dispatch drivers, and send the daily menu &mdash;
+            from a single dashboard, with ZATCA invoicing built in.
           </p>
         </div>
       </section>

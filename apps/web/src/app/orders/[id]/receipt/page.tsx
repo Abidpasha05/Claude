@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import QRCode from 'qrcode';
 import { createAdminClient } from '@/lib/supabase/server';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 import { generateZatcaQR } from '@/lib/zatca/qr';
 import { ReceiptActions } from './receipt-actions';
 

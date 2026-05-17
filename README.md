@@ -1,9 +1,12 @@
-# TableBite — Restaurant SaaS Platform
+# Arkan — From kitchen to customer, all in one
+
+> أركان · the pillars your restaurant runs on.
 
 A multi-tenant SaaS + customer app for restaurants. One platform for online ordering,
 table reservations, party catering, meal subscriptions, daily-menu notifications,
-complaints, and promotions. Built for the GCC market (Arabic + English, STC Pay /
-Tap / HyperPay), but works anywhere.
+complaints, promotions, kitchen display, driver dispatch, and ZATCA e-invoicing.
+Built for the GCC market (Arabic + English, STC Pay / Tap / HyperPay), but works
+anywhere.
 
 ## What's included
 
@@ -36,7 +39,7 @@ Tap / HyperPay), but works anywhere.
 ## Architecture
 
 ```
-restaurant-saas/
+arkan/
 ├── apps/
 │   ├── web/                 # Next.js 15 — customer storefront + restaurant admin + SaaS marketing
 │   │   ├── src/app/
@@ -245,7 +248,7 @@ Realtime; once a location row exists for the order and status is
 **Restaurant admin (`/admin/drivers`):** roster with online dot,
 deliveries-completed count, current assignment per driver, an alert panel
 for unassigned deliveries, and an "Add driver" form that links any
-existing TableBite account by email.
+existing Arkan account by email.
 
 ## Kitchen Display System (KDS)
 
@@ -324,6 +327,6 @@ menu for today. The actual push dispatch (Expo Push / FCM) is a TODO in
 | Live order tracking | Schema supports it; UI not built |
 | Driver app | Schema supports `driver_id`; app not built |
 | KDS (kitchen display) | Schema supports it; UI not built |
-| Multi-language UI | Helper exists (`@restaurant-saas/shared` `t()`); apply throughout |
+| Multi-language UI | Helper exists (`@arkan/shared` `t()`); apply throughout |
 
 See `docs/architecture.md` for deeper notes.

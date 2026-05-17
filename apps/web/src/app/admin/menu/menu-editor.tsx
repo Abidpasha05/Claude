@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 export function MenuEditor({ restaurantId, categories, items }: any) {
   const router = useRouter();

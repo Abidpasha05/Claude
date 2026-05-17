@@ -3,7 +3,7 @@ import { FlatList, Image, Pressable, Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { supabase } from '@/lib/supabase';
 import { useCart } from '@/lib/cart-store';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 export default function RestaurantScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();

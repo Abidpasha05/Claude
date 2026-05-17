@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 import { OrderStatusSelect } from './status-select';
 
 export default async function AdminOrdersPage() {

@@ -6,7 +6,10 @@ export default function HomePage() {
     <div className="min-h-screen">
       <header className="border-b bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="font-bold text-xl text-brand-700">TableBite</Link>
+          <Link href="/" className="flex items-baseline gap-2">
+            <span className="font-bold text-xl text-brand-700">Arkan</span>
+            <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أركان</span>
+          </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link href="/restaurants" className="hover:text-brand-700">Restaurants</Link>
             <Link href="/for-business" className="hover:text-brand-700">For Restaurants</Link>
@@ -22,20 +25,21 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-brand-50 via-white to-brand-100">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-32 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="badge bg-brand-100 text-brand-700 mb-4">All-in-one restaurant platform</span>
+            <span className="badge bg-brand-100 text-brand-700 mb-4">Arkan · أركان</span>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Run your restaurant.<br />Delight your diners.
+              From kitchen to&nbsp;customer,<br />
+              <span className="text-brand-700">all in one.</span>
             </h1>
             <p className="mt-6 text-lg text-neutral-600">
-              One platform for orders, bookings, party catering, meal subscriptions,
-              and customer notifications. Built for the GCC.
+              Orders, bookings, party catering, meal subscriptions, kitchen display,
+              driver dispatch, and ZATCA invoicing &mdash; one platform built for the GCC.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/restaurants" className="btn-primary">
                 Order from a restaurant <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link href="/for-business" className="btn-secondary">
-                Get TableBite for your restaurant
+                Get Arkan for your restaurant
               </Link>
             </div>
           </div>
@@ -74,7 +78,7 @@ export default function HomePage() {
 
       <footer className="border-t bg-white py-8">
         <div className="max-w-7xl mx-auto px-4 text-sm text-neutral-500 flex flex-wrap justify-between gap-4">
-          <p>&copy; {new Date().getFullYear()} TableBite</p>
+          <p>&copy; {new Date().getFullYear()} Arkan</p>
           <div className="flex gap-4">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

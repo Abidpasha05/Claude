@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient, createAdminClient } from '@/lib/supabase/server';
-import { feedbackPayloadSchema } from '@restaurant-saas/shared';
+import { feedbackPayloadSchema } from '@arkan/shared';
 
 export async function POST(req: Request) {
   const body = await req.json();

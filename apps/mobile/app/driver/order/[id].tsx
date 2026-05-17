@@ -4,7 +4,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Location from 'expo-location';
 import { supabase } from '@/lib/supabase';
 import { api } from '@/lib/api';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 // While a driver is on a delivery, stream location every ~10s.
 const LOCATION_INTERVAL_MS = 10_000;

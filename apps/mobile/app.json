@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "TableBite",
-    "slug": "tablebite",
-    "scheme": "tablebite",
+    "name": "Arkan",
+    "slug": "arkan",
+    "scheme": "arkan",
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
@@ -12,17 +12,17 @@
       "expo-secure-store",
       ["expo-notifications", { "color": "#f97316" }],
       ["expo-location", {
-        "locationAlwaysAndWhenInUsePermission": "TableBite needs your location to share live ETA with customers while you deliver."
+        "locationAlwaysAndWhenInUsePermission": "Arkan needs your location to share live ETA with customers while you deliver."
       }]
     ],
     "notification": {
       "icon": "./assets/notification-icon.png",
       "color": "#f97316",
       "androidMode": "default",
-      "androidCollapsedTitle": "TableBite"
+      "androidCollapsedTitle": "Arkan"
     },
-    "ios": { "supportsTablet": true, "bundleIdentifier": "com.tablebite.app" },
-    "android": { "package": "com.tablebite.app" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.arkan.app" },
+    "android": { "package": "com.arkan.app" },
     "extra": {
       "supabaseUrl": "$EXPO_PUBLIC_SUPABASE_URL",
       "supabaseAnonKey": "$EXPO_PUBLIC_SUPABASE_ANON_KEY"

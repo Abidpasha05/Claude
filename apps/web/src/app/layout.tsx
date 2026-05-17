@@ -2,8 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'TableBite — Restaurant SaaS',
-  description: 'Order, book, and discover from your favourite restaurants.',
+  title: 'Arkan — From kitchen to customer, all in one',
+  description: 'The all-in-one platform for restaurants: orders, bookings, party catering, meal subscriptions, and live operations.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

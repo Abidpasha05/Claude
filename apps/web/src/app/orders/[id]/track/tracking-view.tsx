@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 import { Check, Clock, ChefHat, Package, Truck, Bike, CheckCircle2, XCircle } from 'lucide-react';
 
 type Order = any;

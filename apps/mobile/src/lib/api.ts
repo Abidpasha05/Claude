@@ -2,7 +2,7 @@ import Constants from 'expo-constants';
 import { supabase } from './supabase';
 
 // Single base URL for all REST calls. Set EXPO_PUBLIC_API_URL to your deployed
-// Next.js app (e.g. https://tablebite.app). For local dev pointing at a
+// Next.js app (e.g. https://arkan.app). For local dev pointing at a
 // laptop, use your machine's LAN IP, e.g. http://192.168.1.10:3000.
 export const API_URL =
   process.env.EXPO_PUBLIC_API_URL ??

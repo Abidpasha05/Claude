@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient, createAdminClient } from '@/lib/supabase/server';
-import { computePricing } from '@restaurant-saas/shared';
+import { computePricing } from '@arkan/shared';
 import { pickGateway } from '@/lib/payments';
 
 export async function POST(req: Request) {

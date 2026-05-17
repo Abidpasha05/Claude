@@ -23,7 +23,7 @@ export function InviteDriver({ restaurantId }: { restaurantId: string }) {
       .single();
 
     if (!profile) {
-      setError('No TableBite account found with that email. Ask the driver to sign up first.');
+      setError('No Arkan account found with that email. Ask the driver to sign up first.');
       setBusy(false);
       return;
     }

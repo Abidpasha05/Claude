@@ -49,14 +49,14 @@ international markets.
 
 ## Pricing
 
-Pure function `computePricing` in `@restaurant-saas/shared/pricing` is used
+Pure function `computePricing` in `@arkan/shared/pricing` is used
 both client-side (for live cart totals) and server-side (for authoritative
 order creation). Tax is currently hard-coded at 15% (KSA VAT); replace with
 the restaurant's configured tax rate per country.
 
 ## Localization
 
-`@restaurant-saas/shared/i18n` provides a minimal `t(key, locale)` helper. All
+`@arkan/shared/i18n` provides a minimal `t(key, locale)` helper. All
 domain rows have `name_ar` / `description_ar` columns. Add RTL detection at
 the layout level (`<html dir="rtl">` when locale = `ar`).
 

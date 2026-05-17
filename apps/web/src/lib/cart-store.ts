@@ -2,7 +2,7 @@
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { CartLine } from '@restaurant-saas/shared';
+import type { CartLine } from '@arkan/shared';
 
 interface CartState {
   restaurant_id: string | null;

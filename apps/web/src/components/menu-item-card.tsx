@@ -2,7 +2,7 @@
 
 import { Flame, Leaf, WheatOff } from 'lucide-react';
 import { useCart } from '@/lib/cart-store';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 interface Item {
   id: string;

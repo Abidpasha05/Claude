@@ -1,7 +1,7 @@
 import { FlatList, Pressable, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useCart } from '@/lib/cart-store';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 export default function CartScreen() {
   const router = useRouter();

@@ -3,7 +3,7 @@ import { ActivityIndicator, Alert, Pressable, RefreshControl, ScrollView, Text, 
 import { Link } from 'expo-router';
 import { api } from '@/lib/api';
 import { supabase } from '@/lib/supabase';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 type Lists = { available: any[]; active: any[] };
 

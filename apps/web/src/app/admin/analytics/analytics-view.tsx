@@ -16,7 +16,7 @@ import {
   YAxis,
 } from 'recharts';
 import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
-import { formatMoney } from '@restaurant-saas/shared';
+import { formatMoney } from '@arkan/shared';
 
 interface Summary {
   total_orders: number;

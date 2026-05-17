@@ -1,4 +1,4 @@
-project_id = "restaurant-saas"
+project_id = "arkan"
 
 [api]
 enabled = true
