@@ -22,8 +22,22 @@ export function OrderStatusSelect({ orderId, status }: { orderId: string; status
         const next = e.target.value;
         start(async () => {
           const supabase = createClient();
-          await supabase.from('orders').update({ status: next, completed_at: next === 'completed' ? new Date().toISOString() : null }).eq('id', orderId);
+          await supabase
+            .from('orders')
+            .update({
+              status: next,
+              completed_at: next === 'completed' ? new Date().toISOString() : null,
+            })
+            .eq('id', orderId);
           await supabase.from('order_status_history').insert({ order_id: orderId, status: next });
+
+          // Fire-and-forget push notification to the customer. Don't block UI on it.
+          fetch('/api/notifications/order-update', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ order_id: orderId }),
+          }).catch(() => {});
+
           router.refresh();
         });
       }}

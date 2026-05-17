@@ -7,7 +7,17 @@
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "plugins": ["expo-router", "expo-secure-store"],
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      ["expo-notifications", { "color": "#f97316" }]
+    ],
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#f97316",
+      "androidMode": "default",
+      "androidCollapsedTitle": "TableBite"
+    },
     "ios": { "supportsTablet": true, "bundleIdentifier": "com.tablebite.app" },
     "android": { "package": "com.tablebite.app" },
     "extra": {

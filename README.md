@@ -136,6 +136,52 @@ Test mode without keys: leave `TAP_SECRET_KEY` unset. The mock gateway issues
 a fake intent and redirects straight to `/orders/[id]/return?mock=1`, which
 auto-confirms the order — useful for UI iteration.
 
+## Mobile app
+
+The Expo app at `apps/mobile` mirrors the customer web flow end-to-end:
+
+- Browse restaurants → menu → tap to add items (floating cart badge)
+- Cart screen with quantity controls
+- Checkout with time-slot picker, contact form, payment method (cash/card/STC Pay)
+- Tap-hosted card payments open in the system browser; the webhook updates the
+  order and the mobile tracking screen reflects it live via Realtime
+- `/order/[id]` shows the same timeline as the web tracking page
+- Orders tab lists past orders for the signed-in user
+
+```bash
+cd apps/mobile
+cp .env.example .env
+# Set EXPO_PUBLIC_SUPABASE_URL, EXPO_PUBLIC_SUPABASE_ANON_KEY
+# Set EXPO_PUBLIC_API_URL to your LAN IP (e.g. http://192.168.1.10:3000)
+npx expo start
+```
+
+## Push notifications (Expo Push)
+
+Wired end-to-end:
+
+1. **Registration** — `apps/mobile/src/lib/push.ts` requests permission,
+   obtains the Expo push token, and upserts into `push_tokens`. The root
+   layout calls this whenever a user signs in.
+2. **Daily-menu push** — `POST /api/notifications/daily-menu` (protected by
+   `CRON_SECRET`) loops over today's published menus, queues in-app
+   notifications, and dispatches to every follower's active tokens via
+   `https://exp.host/--/api/v2/push/send`. Configured to run every morning
+   at 08:00 UTC via `apps/web/vercel.json`.
+3. **Order updates** — when the admin advances a status in
+   `/admin/orders`, the status-select fires
+   `POST /api/notifications/order-update`, which pushes a friendly message
+   to the customer ("Your order is out for delivery").
+4. **Dead-token cleanup** — `sendExpoPush` deactivates tokens that come
+   back `DeviceNotRegistered` so we don't keep paying for non-existent
+   devices.
+5. **Deep-linking** — tapping a daily-menu push opens the restaurant
+   screen; tapping an order-update push opens that order's tracking
+   screen.
+
+Optional: set `EXPO_PUSH_ACCESS_TOKEN` (from your Expo dashboard) once you
+enable enhanced push security in the Expo project settings.
+
 ## Live order tracking
 
 `/orders/[id]/track` shows a real-time timeline (placed → confirmed → preparing
