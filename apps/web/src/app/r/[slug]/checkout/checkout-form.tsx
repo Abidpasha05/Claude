@@ -84,7 +84,13 @@ export function CheckoutForm({ restaurant, slug }: Props) {
       const json = await res.json();
       if (!res.ok) throw new Error(json.error ?? 'Order failed');
       clear();
-      router.push(`/orders/${json.order.id}`);
+      if (json.redirect_url) {
+        // Card / Mada / STC Pay → Tap-hosted checkout
+        window.location.href = json.redirect_url;
+      } else {
+        // Cash → straight to live tracking
+        router.push(`/orders/${json.order.id}/track`);
+      }
     } catch (e: any) {
       setError(e.message);
     } finally {

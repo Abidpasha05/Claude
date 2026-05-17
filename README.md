@@ -105,13 +105,46 @@ Then visit `/admin`.
 ## Payment gateways
 
 All gateways implement `PaymentGateway` from `apps/web/src/lib/payments`. Currently
-included: **STC Pay**, **Tap Payments**, **HyperPay**, **Stripe**. Without API keys,
-they return mock intents so the flow is testable end-to-end.
+included: **STC Pay** (stub), **Tap Payments** (fully wired), **HyperPay** (stub),
+**Stripe** (basic). Without API keys, they return mock intents so the flow is
+testable end-to-end.
 
 `pickGateway(method, country)` routes by method + country:
 - `stc_pay` → STC Pay
 - `card` / `mada` in GCC → Tap
 - `card` elsewhere → Stripe
+
+### Tap Payments — production setup
+
+1. Sign up at https://tap.company → get your `sk_test_*` / `sk_live_*` secret key.
+2. Set in `.env.local`:
+   ```
+   TAP_SECRET_KEY=sk_test_xxx
+   TAP_WEBHOOK_URL=https://your-domain.com/api/payments/tap/webhook
+   NEXT_PUBLIC_APP_URL=https://your-domain.com
+   ```
+3. In your Tap dashboard, register the webhook URL above. Tap signs each payload
+   with HMAC-SHA256 using your secret key; the handler in
+   `apps/web/src/app/api/payments/tap/webhook/route.ts` verifies the `hashstring`
+   header before trusting the event.
+4. Test flow: choose "Card" at checkout → redirected to Tap's hosted page → use
+   Tap's test card `5123450000000008` (any future expiry, CVV `100`) → on return
+   you'll land on `/orders/[id]/track` and the status updates live as the
+   webhook confirms the payment.
+
+Test mode without keys: leave `TAP_SECRET_KEY` unset. The mock gateway issues
+a fake intent and redirects straight to `/orders/[id]/return?mock=1`, which
+auto-confirms the order — useful for UI iteration.
+
+## Live order tracking
+
+`/orders/[id]/track` shows a real-time timeline (placed → confirmed → preparing
+→ ready/out for delivery → completed) using Supabase Realtime channels. The
+customer's page updates instantly when the admin advances the status in
+`/admin/orders`, and when Tap's webhook confirms payment.
+
+Realtime is enabled on `orders` and `order_status_history` via the migration
+`20260517000003_realtime_publication.sql`.
 
 ## Daily-menu notifications (cron)
 
