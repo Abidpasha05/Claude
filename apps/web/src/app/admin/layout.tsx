@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
-import { LayoutDashboard, ShoppingBag, UtensilsCrossed, CalendarDays, Users, Sparkles, MessageCircle, Settings, Bike } from 'lucide-react';
+import { LayoutDashboard, ShoppingBag, UtensilsCrossed, CalendarDays, Users, Sparkles, MessageCircle, Settings, Bike, Monitor, BarChart3 } from 'lucide-react';
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
@@ -37,6 +37,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         </div>
         <nav className="flex-1 p-2 space-y-1">
           <NavItem href="/admin" icon={<LayoutDashboard className="w-4 h-4" />} label="Dashboard" />
+          <NavItem href="/admin/analytics" icon={<BarChart3 className="w-4 h-4" />} label="Analytics" />
           <NavItem href="/admin/orders" icon={<ShoppingBag className="w-4 h-4" />} label="Orders" />
           <NavItem href="/admin/menu" icon={<UtensilsCrossed className="w-4 h-4" />} label="Menu" />
           <NavItem href="/admin/daily-menu" icon={<CalendarDays className="w-4 h-4" />} label="Daily Menu" />
@@ -48,6 +49,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <NavItem href="/admin/promotions" icon={<Sparkles className="w-4 h-4" />} label="Promotions" />
           <NavItem href="/admin/feedback" icon={<MessageCircle className="w-4 h-4" />} label="Feedback" />
           <NavItem href="/admin/settings" icon={<Settings className="w-4 h-4" />} label="Settings" />
+          <NavItem
+            href={`/kds/${(memberships[0] as any).restaurants?.slug}`}
+            icon={<Monitor className="w-4 h-4" />}
+            label="Kitchen Display"
+          />
         </nav>
         <div className="p-4 text-xs text-neutral-400 border-t border-neutral-800">
           Signed in as {user.email}

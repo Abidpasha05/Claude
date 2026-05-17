@@ -247,6 +247,46 @@ deliveries-completed count, current assignment per driver, an alert panel
 for unassigned deliveries, and an "Add driver" form that links any
 existing TableBite account by email.
 
+## Kitchen Display System (KDS)
+
+Full-screen, tablet-optimised view at `/kds/[restaurantSlug]`. Lives
+outside the admin layout so it can run truly full-screen with no chrome.
+
+- Three-column kanban: **New** (placed/confirmed) → **Preparing** → **Ready**
+- Each card shows order #, type, items with quantities, customer notes,
+  live wait-time counter, and slot deadline
+- Cards turn amber 5 minutes before the restaurant's `preparation_time_minutes`
+  and red once overdue
+- Big touch buttons advance each order: "Start preparing" → "Mark ready"
+  → "Bump (complete)". Status updates flow to the customer's live
+  tracking page via Realtime.
+- Web Audio chime plays when a new order arrives (no audio asset needed
+  — generated on the fly). Mutable.
+- Subscribes to `orders` INSERT + UPDATE so the board updates instantly
+  when a new order lands or a chef on another tablet bumps a card.
+
+Open it from the admin sidebar ("Kitchen Display") or bookmark
+`/kds/al-noor-kitchen` on a kitchen tablet.
+
+## Analytics
+
+`/admin/analytics` — range-selectable (7 / 30 / 90 / 365 days) with
+**period-over-period comparison** baked into every headline metric.
+
+- **Headline KPIs**: revenue, order count, average order value, unique
+  customers — each with up/down delta vs the prior equivalent period
+- **Revenue trend** — daily area chart over the selected window
+- **Peak hours** — hour-of-day bar chart, makes staffing decisions
+  obvious at a glance
+- **Top sellers** — top 10 items by units sold, with revenue
+- **Order-type mix** — delivery / takeaway / dine-in / party / subscription
+- **Payment-method mix** — cash / card / STC Pay / etc. with relative bars
+
+All five panels are powered by a single migration of Postgres aggregation
+RPCs (`restaurant_summary`, `restaurant_revenue_by_day`,
+`restaurant_best_sellers`, `restaurant_peak_hours`,
+`restaurant_breakdowns`). One round trip, server-rendered, no API thrash.
+
 ## Live order tracking
 
 `/orders/[id]/track` shows a real-time timeline (placed → confirmed → preparing
