@@ -1,6 +1,6 @@
-# Arkan — From kitchen to customer, all in one
+# Aklio — From kitchen to customer, all in one
 
-> أركان · the pillars your restaurant runs on.
+> أكليو · everything restaurants need to feed their customers.
 
 A multi-tenant SaaS + customer app for restaurants. One platform for online ordering,
 table reservations, party catering, meal subscriptions, daily-menu notifications,
@@ -248,7 +248,7 @@ Realtime; once a location row exists for the order and status is
 **Restaurant admin (`/admin/drivers`):** roster with online dot,
 deliveries-completed count, current assignment per driver, an alert panel
 for unassigned deliveries, and an "Add driver" form that links any
-existing Arkan account by email.
+existing Aklio account by email.
 
 ## Kitchen Display System (KDS)
 
@@ -327,6 +327,6 @@ menu for today. The actual push dispatch (Expo Push / FCM) is a TODO in
 | Live order tracking | Schema supports it; UI not built |
 | Driver app | Schema supports `driver_id`; app not built |
 | KDS (kitchen display) | Schema supports it; UI not built |
-| Multi-language UI | Helper exists (`@arkan/shared` `t()`); apply throughout |
+| Multi-language UI | Helper exists (`@aklio/shared` `t()`); apply throughout |
 
 See `docs/architecture.md` for deeper notes.

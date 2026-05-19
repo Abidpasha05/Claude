@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" fill="none" role="img" aria-label="Arkan أركان">
-  <title>Arkan أركان</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" fill="none" role="img" aria-label="Aklio أكليو">
+  <title>Aklio أكليو</title>
   <!-- Mark centred -->
   <g transform="translate(48,12)">
     <path d="M 32 6 L 24 54 L 10 54 Z" fill="#0f172a"/>
@@ -9,11 +9,11 @@
   <!-- Latin wordmark -->
   <text x="80" y="124" text-anchor="middle"
         font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="800"
-        fill="#0f172a" letter-spacing="-1.2">Arkan</text>
+        fill="#0f172a" letter-spacing="-1.2">Aklio</text>
   <!-- Arabic wordmark -->
   <text x="80" y="160" text-anchor="middle" direction="rtl"
         font-family="'Cairo','Tajawal',system-ui,sans-serif" font-size="28" font-weight="700"
-        fill="#f59e0b">أركان</text>
+        fill="#f59e0b">أكليو</text>
   <!-- Tagline -->
   <text x="80" y="195" text-anchor="middle"
         font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="600"

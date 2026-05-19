@@ -3,7 +3,7 @@ import { ActivityIndicator, Alert, Pressable, RefreshControl, ScrollView, Text, 
 import { Link } from 'expo-router';
 import { api } from '@/lib/api';
 import { supabase } from '@/lib/supabase';
-import { formatMoney } from '@arkan/shared';
+import { formatMoney } from '@aklio/shared';
 
 type Lists = { available: any[]; active: any[] };
 

@@ -1,6 +1,6 @@
-# Arkan Brand Assets
+# Aklio Brand Assets
 
-> **Arkan** · أركان — *the pillars your restaurant runs on*
+> **Aklio** · أكليو — *food, made operational*
 > Tagline: **From kitchen to customer, all in one.**
 
 ## Logo system
@@ -17,11 +17,13 @@
 
 ## Concept
 
-The mark is a bold **monogram A**: two confident triangular slabs in deep navy meeting at the apex, with a wide amber crossbar cutting through the centre.
+The name **Aklio** is rooted in **أكل** (*akl* — Arabic for *food, eating, a meal*) — the universal language of hospitality. The "io" suffix lands it in the modern product/tech space: Aklio is what happens when food gets a great operating system.
 
-- The two slabs are the **pillars** (أركان literally means *pillars / foundations*) — the structure the platform provides.
-- The **amber crossbar** is the warmth at the heart of every kitchen, framed by the navy structure.
-- Geometric, architectural, instantly recognizable at any size. Reads cleanly at 16×16 favicon.
+The mark is a bold **monogram A** — two confident triangular slabs in deep navy meeting at the apex, with a wide amber crossbar through the centre.
+
+- The two slabs frame everything — the kitchen and the customer.
+- The **amber crossbar** is the meal itself: the warmth and energy at the heart of the brand.
+- Geometric, calm, instantly recognizable at any size. Reads cleanly at 16×16 favicon.
 
 ## Colour palette
 

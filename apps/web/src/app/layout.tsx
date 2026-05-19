@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Arkan — From kitchen to customer, all in one',
+  title: 'Aklio — From kitchen to customer, all in one',
   description: 'The all-in-one platform for restaurants: orders, bookings, party catering, meal subscriptions, and live operations.',
   icons: { icon: '/favicon.svg' },
 };

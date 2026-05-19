@@ -3,8 +3,8 @@ import { Alert, Linking, Pressable, ScrollView, Text, TextInput, View } from 're
 import { useRouter } from 'expo-router';
 import { useCart } from '@/lib/cart-store';
 import { api } from '@/lib/api';
-import { computePricing, formatMoney, formatSlot, generateSlots } from '@arkan/shared';
-import type { PaymentMethod } from '@arkan/shared';
+import { computePricing, formatMoney, formatSlot, generateSlots } from '@aklio/shared';
+import type { PaymentMethod } from '@aklio/shared';
 
 const PAYMENT_OPTIONS: { value: PaymentMethod; label: string }[] = [
   { value: 'cash', label: 'Cash' },

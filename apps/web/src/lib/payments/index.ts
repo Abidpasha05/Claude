@@ -1,7 +1,7 @@
 // Payment gateway abstraction. Each provider implements the same interface so
 // the rest of the app stays gateway-agnostic.
 
-import type { PaymentMethod } from '@arkan/shared';
+import type { PaymentMethod } from '@aklio/shared';
 
 export interface PaymentIntent {
   id: string;

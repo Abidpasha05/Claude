@@ -41,7 +41,7 @@ export const tapPayments: PaymentGateway = {
         threeDSecure: true,
         save_card: false,
         description: `Order ${order_id}`,
-        statement_descriptor: 'Arkan',
+        statement_descriptor: 'Aklio',
         metadata: { order_id },
         reference: { order: order_id, transaction: order_id },
         receipt: { email: !!customer_email, sms: false },

@@ -107,7 +107,7 @@ export default async function AdminDriversPage() {
         })}
         {!drivers?.length && (
           <div className="card p-10 text-center text-neutral-500 col-span-2">
-            No drivers linked. Invite one with their existing Arkan account email.
+            No drivers linked. Invite one with their existing Aklio account email.
           </div>
         )}
       </div>

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { CartLine } from '@arkan/shared';
+import type { CartLine } from '@aklio/shared';
 
 interface CartState {
   restaurant_id: string | null;

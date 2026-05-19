@@ -6,10 +6,10 @@ export default function ForBusinessPage() {
     <div className="min-h-screen">
       <header className="border-b bg-white">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2" aria-label="Arkan home">
+          <Link href="/" className="flex items-center gap-2" aria-label="Aklio home">
             <img src="/brand/logo-mark.svg" alt="" width={28} height={28} />
-            <span className="font-bold text-xl text-brand-600">Arkan</span>
-            <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أركان</span>
+            <span className="font-bold text-xl text-brand-600">Aklio</span>
+            <span className="hidden sm:inline text-xs text-neutral-500" dir="rtl">أكليو</span>
           </Link>
           <Link href="/auth/sign-in" className="btn-primary text-sm">Sign in to your dashboard</Link>
         </div>
@@ -17,7 +17,7 @@ export default function ForBusinessPage() {
 
       <section className="bg-gradient-to-br from-brand-50 to-white">
         <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-          <span className="badge bg-accent-100 text-accent-700 mb-4">Arkan for restaurants</span>
+          <span className="badge bg-accent-100 text-accent-700 mb-4">Aklio for restaurants</span>
           <h1 className="text-4xl md:text-5xl font-bold">From kitchen to customer, all in one.</h1>
           <p className="mt-4 text-lg text-neutral-600">
             Take orders, manage bookings, run promotions, dispatch drivers, and send the daily menu &mdash;

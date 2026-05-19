@@ -3,8 +3,8 @@
 import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useCart } from '@/lib/cart-store';
-import { computePricing, formatMoney, generateSlots, formatSlot } from '@arkan/shared';
-import type { PaymentMethod } from '@arkan/shared';
+import { computePricing, formatMoney, generateSlots, formatSlot } from '@aklio/shared';
+import type { PaymentMethod } from '@aklio/shared';
 
 interface Props {
   restaurant: {

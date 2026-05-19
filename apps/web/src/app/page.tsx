@@ -6,10 +6,10 @@ export default function HomePage() {
     <div className="min-h-screen">
       <header className="border-b bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2" aria-label="Arkan home">
+          <Link href="/" className="flex items-center gap-2" aria-label="Aklio home">
             <img src="/brand/logo-mark.svg" alt="" width={28} height={28} />
-            <span className="font-bold text-xl text-brand-600">Arkan</span>
-            <span className="hidden sm:inline text-xs text-accent-600" dir="rtl">أركان</span>
+            <span className="font-bold text-xl text-brand-600">Aklio</span>
+            <span className="hidden sm:inline text-xs text-accent-600" dir="rtl">أكليو</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link href="/restaurants" className="hover:text-accent-600">Restaurants</Link>
@@ -26,7 +26,7 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-brand-50 via-white to-accent-50">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-32 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="badge bg-accent-100 text-accent-700 mb-4">Arkan · أركان</span>
+            <span className="badge bg-accent-100 text-accent-700 mb-4">Aklio · أكليو</span>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-brand-600">
               From kitchen to&nbsp;customer,<br />
               <span className="text-accent-600">all in one.</span>
@@ -40,7 +40,7 @@ export default function HomePage() {
                 Order from a restaurant <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link href="/for-business" className="btn-secondary">
-                Get Arkan for your restaurant
+                Get Aklio for your restaurant
               </Link>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function HomePage() {
 
       <footer className="border-t bg-white py-8">
         <div className="max-w-7xl mx-auto px-4 text-sm text-neutral-500 flex flex-wrap justify-between gap-4">
-          <p>&copy; {new Date().getFullYear()} Arkan</p>
+          <p>&copy; {new Date().getFullYear()} Aklio</p>
           <div className="flex gap-4">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

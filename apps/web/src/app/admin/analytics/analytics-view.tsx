@@ -16,7 +16,7 @@ import {
   YAxis,
 } from 'recharts';
 import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
-import { formatMoney } from '@arkan/shared';
+import { formatMoney } from '@aklio/shared';
 
 interface Summary {
   total_orders: number;

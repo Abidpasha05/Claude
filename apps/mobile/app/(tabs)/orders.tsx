@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FlatList, Pressable, Text, View } from 'react-native';
 import { Link } from 'expo-router';
 import { supabase } from '@/lib/supabase';
-import { formatMoney } from '@arkan/shared';
+import { formatMoney } from '@aklio/shared';
 
 export default function OrdersScreen() {
   const [orders, setOrders] = useState<any[] | null>(null);

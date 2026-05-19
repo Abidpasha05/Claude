@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
-import { formatMoney } from '@arkan/shared';
+import { formatMoney } from '@aklio/shared';
 import { OrderStatusSelect } from './status-select';
 
 export default async function AdminOrdersPage() {

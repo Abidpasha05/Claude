@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { supabase } from '@/lib/supabase';
-import { formatMoney } from '@arkan/shared';
+import { formatMoney } from '@aklio/shared';
 
 const DELIVERY_FLOW = ['placed', 'confirmed', 'preparing', 'out_for_delivery', 'completed'];
 const TAKEAWAY_FLOW = ['placed', 'confirmed', 'preparing', 'ready_for_pickup', 'completed'];

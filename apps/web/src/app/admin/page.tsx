@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
-import { formatMoney } from '@arkan/shared';
+import { formatMoney } from '@aklio/shared';
 
 async function getRestaurantId() {
   const supabase = await createClient();
